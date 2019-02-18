@@ -16,12 +16,12 @@ namespace SessionDemo.Controllers
             return View();
         }
 
-        public IActionResult Login()
+        public IActionResult Login(string name ="viram")
         {
             var user = new LoggedInUser
             {
                 Id = 1,
-                Name="Viram"
+                Name= name
             };
 
             SessionHelper.LoggedInUser = user;
